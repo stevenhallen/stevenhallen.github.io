@@ -1,4 +1,4 @@
-set :haml
+set :haml, { :ugly => true, :format => :html5 }
 
 ###
 # Compass
