@@ -3,14 +3,22 @@
   %head
     %meta{charset: "utf-8"}
 
+    -# For zurb foundation; sets the viewport width to device width for mobile
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+
+    -# Might delete these later if unnecessary
+    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/stylesheet.css", media: "screen"}
+    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/pygment_trac.css", media: "screen"}
+    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/print.css", media: "print"}
+
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{content: "IE=edge,chrome=1", :'http-equiv' => "X-UA-Compatible"}
 
     / Use title if it's in the page YAML frontmatter
-    %title= current_page.data.title || "The Middleman"
+    %title= current_page.data.title || "Steven H. Allen by stevenhallen"
 
-    = stylesheet_link_tag "normalize", "all"
-    = javascript_include_tag  "all"
+    = stylesheet_link_tag "site.css"
+    = javascript_include_tag "site.js"
 
-  %body{class: "= page_classes"}
+  %body{class: "#{page_classes}"}
     = yield
