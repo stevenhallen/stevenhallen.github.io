@@ -5,11 +5,11 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
-  # blog.prefix = "blog"
-  blog.permalink = "articles/:year/:title.html"
-  blog.sources = "articles/:year-:month-:day-:title.html"
+  blog.prefix = "articles"
+  blog.permalink = ":year/:title.html"
+  blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
-  blog.layout = "layout"
+  blog.layout = "blog_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = ":year.html"
