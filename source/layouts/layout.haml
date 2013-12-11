@@ -7,9 +7,9 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
 
     -# Might delete these later if unnecessary
-    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/stylesheet.css", media: "screen"}
-    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/pygment_trac.css", media: "screen"}
-    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/print.css", media: "print"}
+      %link{rel: "stylesheet", type: "text/css", href: "stylesheets/stylesheet.css", media: "screen"}
+      %link{rel: "stylesheet", type: "text/css", href: "stylesheets/pygment_trac.css", media: "screen"}
+      %link{rel: "stylesheet", type: "text/css", href: "stylesheets/print.css", media: "print"}
 
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{content: "IE=edge,chrome=1", :'http-equiv' => "X-UA-Compatible"}
@@ -21,4 +21,6 @@
     = javascript_include_tag "vendor/custom.modernizr.js"
 
   %body{class: "#{page_classes}"}
+    = partial 'layouts/_header'
     = yield
+    = partial 'layouts/_footer'
