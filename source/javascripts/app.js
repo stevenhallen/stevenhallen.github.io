@@ -2,3 +2,5 @@
 //= require_directory vendor
 //= require_directory foundation
 //= require_directory .
+
+$(document).foundation();
