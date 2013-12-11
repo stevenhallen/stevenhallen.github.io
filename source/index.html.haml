@@ -69,6 +69,7 @@ title: "Steven H. Allen by stevenhallen"
           %li
             %a{:href => "#"} See all →
 / End Top Bar
+
 .row
   .large-12.columns
     / Content Slider
@@ -88,46 +89,8 @@ title: "Steven H. Allen by stevenhallen"
     .row
       .large-12.columns
         .row
-          / Shows
-          .large-4.small-6.columns
-            %h4 Upcoming Shows
-            %hr/
-            .row
-              .large-1.column
-                %img{:src => "http://placehold.it/50x50&text=[img]"}/
-              .large-9.columns
-                %h5
-                  %a{:href => "#"} Venue Name
-                %h6.subheader.show-for-small Doors at 00:00pm
-            %hr/
-            .hide-for-small
-              .row
-                .large-1.column
-                  %img{:src => "http://placehold.it/50x50&text=[img]"}/
-                .large-9.columns
-                  %h5.subheader
-                    %a{:href => "#"} Venue Name
-              %hr/
-              .row
-                .large-1.column
-                  %img{:src => "http://placehold.it/50x50&text=[img]"}/
-                .large-9.columns
-                  %h5.subheader
-                    %a{:href => "#"} Venue Name
-              %hr/
-              .row
-                .large-1.column
-                  %img{:src => "http://placehold.it/50x50&text=[img]"}/
-                .large-9.columns
-                  %h5.subheader
-                    %a{:href => "#"} Venue Name
-          / End Shows
-          / Image
-          .large-4.small-6.columns
-            %img{:src => "http://placehold.it/300x465&text=Image"}/
-          / End Image
           / Feed
-          .large-4.small-12.columns
+          .large-12.small-12.columns
             %h4 Blog
             %hr/
             .panel
@@ -169,6 +132,4 @@ title: "Steven H. Allen by stevenhallen"
     ('__proto__' in {} ? 'zepto' : 'jquery') +
     '.js><\/script>')
 %script{:src => "js/foundation.min.js"}
-:javascript
-  $(document).foundation();
 / End Footer
