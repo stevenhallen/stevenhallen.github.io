@@ -17,8 +17,8 @@
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Steven H. Allen by stevenhallen"
 
-    = stylesheet_link_tag "site.css"
-    = javascript_include_tag "site.js"
+    = stylesheet_link_tag "app.css"
+    = javascript_include_tag "vendor/custom.modernizr.js"
 
   %body{class: "#{page_classes}"}
     = yield
