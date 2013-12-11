@@ -1,7 +1,36 @@
+###
+# Blog settings
+###
+
+# Time.zone = "UTC"
+
+activate :blog do |blog|
+  # blog.prefix = "blog"
+  blog.permalink = "articles/:year/:title.html"
+  blog.sources = "articles/:year-:month-:day-:title.html"
+  # blog.taglink = "tags/:tag.html"
+  blog.layout = "layout"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = ":year.html"
+  # blog.month_link = ":year/:month.html"
+  # blog.day_link = ":year/:month/:day.html"
+  # blog.default_extension = ".markdown"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/:num"
+end
+
+page "/feed.xml", :layout => false
+
 set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
 set :images_dir, 'images'
-set :haml, { :format => :html5 }
+set :js_dir, 'javascripts'
+set :haml, { format: :html5 }
 
 foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
 sprockets.append_path "#{File.join(foundation_path, 'js')}"
@@ -10,6 +39,10 @@ set :sass_assets_paths, [File.join(foundation_path, 'scss')]
 ###
 # Compass
 ###
+
+# Susy grids in Compass
+# First: gem install susy
+# require 'susy'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -33,9 +66,10 @@ set :sass_assets_paths, [File.join(foundation_path, 'scss')]
 #   page "/admin/*"
 # end
 
-# Proxy pages (http://middlemanapp.com/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+# Proxy (fake) files
+# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
+#   @which_fake_page = "Rendering a fake page with a variable"
+# end
 
 ###
 # Helpers
@@ -43,9 +77,6 @@ set :sass_assets_paths, [File.join(foundation_path, 'scss')]
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -64,10 +95,15 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  # activate :cache_buster
 
   # Use relative URLs
   # activate :relative_assets
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  # require "middleman-smusher"
+  # activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
