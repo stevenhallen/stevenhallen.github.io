@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'compass'
 gem 'middleman', '~>3.1.3'
+gem 'nokogiri'
 gem 'zurb-foundation', require: false
 
 # Middleman extensions
