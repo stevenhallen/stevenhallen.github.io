@@ -30,7 +30,7 @@ page "/feed.xml", :layout => false
 set :css_dir, 'stylesheets'
 set :images_dir, 'images'
 set :js_dir, 'javascripts'
-set :haml, { format: :html5 }
+set :haml, { format: :html5, ugly: true }
 
 foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
 sprockets.append_path "#{File.join(foundation_path, 'js')}"
