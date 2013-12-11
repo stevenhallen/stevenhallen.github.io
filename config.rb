@@ -1,4 +1,11 @@
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
 set :haml, { :format => :html5 }
+
+foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
+sprockets.append_path "#{File.join(foundation_path, 'js')}"
+set :sass_assets_paths, [File.join(foundation_path, 'scss')]
 
 ###
 # Compass
@@ -47,11 +54,6 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
