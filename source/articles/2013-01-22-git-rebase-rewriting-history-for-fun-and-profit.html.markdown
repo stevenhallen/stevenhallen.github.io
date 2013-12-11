@@ -24,19 +24,19 @@ One approach to pushing these changes to a remote is:
 
 That’s probably the least effective approach. (But who hasn’t done it?)
 
-===Spectrum of Utilization of git
+###Spectrum of Utilization of git
 
 The spectrum of utilization that I think exists for source code control is something like this:
 
 Poor utilization:
 
-* Each commit generally introduces more than one atomic change;
-* The series of commits over time is generally not very well ordered (it doesn’t tell a coherent story).
+- Each commit generally introduces more than one atomic change;
+- The series of commits over time is generally not very well ordered (it doesn’t tell a coherent story).
 
 Rich utilization:
 
-* Each commit generally introduces a single change;
-* The series of commits over time is well-ordered (it tells a coherent story).
++ Each commit generally introduces a single change;
++ The series of commits over time is well-ordered (it tells a coherent story).
 
 What I love about git is that it makes it incredibly easy to operate on the rich end of the utilization spectrum without requiring that you Do It Right™ from the beginning.
 
