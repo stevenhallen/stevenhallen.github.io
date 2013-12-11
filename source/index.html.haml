@@ -26,17 +26,17 @@ title: "Steven H. Allen by stevenhallen"
             %hr/
             .panel
               %h5
-                %a{:href => "#"} Post Title 1
+                %a{href: "#{blog.articles[0].url}"} #{blog.articles[0].title}
               %h6.subheader
-                Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Suspendisse ultrices ornare tempor...
+                #{blog.articles[0].summary}
               %h6
-                %a{:href => "#"} Read More »
-            .panel.hide-for-small
-              %h5
-                %a{:href => "#"} Post Title 2 »
-            .panel.hide-for-small
-              %h5
-                %a{:href => "#"} Post Title 3 »
-            %a.right{:href => "#"} Go To Blog »
+                %a{href: "#{blog.articles[0].url}"} Read More »
+
+            - blog.articles[1..3].each do |article|
+              .panel.hide-for-small
+                %h5
+                  %a{href: "#{article.url}"} #{article.title} »
+
+            %a.right{:href => "blog.html"} Go To Blog »
           / End Feed
     / End Content
