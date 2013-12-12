@@ -1,7 +1,18 @@
 - wrap_layout :layout do
+  / Heading
+  .row
+    .small-12.columns
+      %h2.text-center= current_page.data.title || 'Define a title for your article!'
+      / Format this at some point
+      %h4.text-center= current_page.data.date
+      - if current_page.data.image
+        %p.text-center
+          = image_tag current_page.data.image
+  / Content
   .row
     .small-12.columns
       #main{:role => "main"}
         %p
           = yield
+  / Recent, tag, year links
   = partial 'layouts/blog_links'
