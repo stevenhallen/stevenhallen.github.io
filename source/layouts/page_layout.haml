@@ -1,0 +1,6 @@
+- wrap_layout :layout do
+  .row
+    / Centering isn't working for some reason
+    .small-12.small-centered.columns
+      %h2= current_page.data.heading || 'Define A Heading!'
+  = yield
