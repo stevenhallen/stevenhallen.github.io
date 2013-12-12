@@ -1,0 +1,24 @@
+---
+people:
+  - name:    Mark Steven McEahern
+    role:    Architect / Developer
+    twitter: m5rk
+    desc:    Mark has a passion for using software to improve people's lives. He's been doing this professionally for over 20 years, most recently as one of the core developers at Chirrpy. He's worked on a wide range of technologies, but lately has been helping web-based businesses utilize Ruby on Rails.
+  - name:    Philip H. Crawford
+    role:    Product Manager / Developer
+    twitter: wiscodude
+    desc:    Philip was a management consultant for 10 years before switching over to software development. He has spent the last 10 years as a product and project manager, helping teams utilize agile practices to create software and successful web based businesses.
+  - name:    Corey Allen Grusden
+    role:    BizDev / Developer
+    twitter: cgrusden
+    desc:    Corey became an expert ruby on rails developer as one of the senior consultants at the boutique rails consultancy Hashrocket. Corey has significant experience in large scale enterprises as well as being a development leader on numerous startups and agile development teams.
+---
+.row
+  .twelve.columns.centered
+    %h2 About Us
+.row
+  .four.columns
+    - current_page.data.people.each do |person|
+      %h4 #{person.name}
+      %h6 #{person.role} #{link_to(image_tag('twitter_icon.png'), "http://twitter.com/#{person.twitter}")}
+      %p= person.desc
