@@ -1,4 +1,11 @@
 ---
+sites:
+  - name: Twitter
+    loc:  http://twitter.com/stevenhallen
+  - name: LinkedIn
+    loc:  http://www.linkedin.com/company/steven-h-allen-&-co-
+  - name: Github
+    loc:  http://github.com/stevenhallen
 pages:
   - name: What We Do
     loc:  /what_we_do.html
@@ -8,6 +15,8 @@ pages:
     loc:  /blog.html
   - name: About Us
     loc:  /about.html
+  - name: Jobs
+    loc:  /jobs.html
   - name: Contact
     loc:  /contact.html
 ---
@@ -24,11 +33,11 @@ pages:
       %li.toggle-topbar.menu-icon
         %a{href: '#'}
           %span menu
-    / Github Button
-    %section
+    / Twitter, LinkedIn, Github, etc
+    %section.top-bar-section
       %ul.left
-        %span.icon
-        %a.btn.btn-github{href: 'https://github.com/stevenhallen'} View on Github
+        - sites.each do |site|
+          %li= link_to site['name'], site['loc']
     / Right Nav Section
     %section.top-bar-section
       %ul.right
