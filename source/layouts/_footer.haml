@@ -1,3 +1,17 @@
+---
+pages:
+  - name: What We Do
+    loc:  /what_we_do.html
+  - name: Our Work
+    loc:  /our_work.html
+  - name: Blog
+    loc:  /blog.html
+  - name: About Us
+    loc:  /about.html
+  - name: Contact
+    loc:  /contact.html
+---
+/ NB: Partial frontmatter accessed differently than that in normal pages
 %footer.row
   .large-12.columns
     %hr
@@ -6,16 +20,9 @@
           %p © Steven H. Allen & Co.
         .large-6.small-12.columns
           %ul.inline-list.right
-            %li
-              %a{href: '/what_we_do.html'} What We Do
-            %li
-              %a{href: '/our_work.html'} Our Work
-            %li
-              %a{href: '/blog.html'} Blog
-            %li
-              %a{href: '/about.html'} About Us
-            %li
-              %a{href: '/contact.html'} Contact
+            - pages.each do |page|
+              %li
+                %a{href: page['loc']} #{page['name']}
 
 :javascript
   document.write('<script src=js/vendor/' +
