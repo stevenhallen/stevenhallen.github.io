@@ -21,6 +21,6 @@
     = javascript_include_tag "vendor/custom.modernizr.js"
 
   %body{class: "#{page_classes}"}
-    = partial 'layouts/_header'
+    = snippet 'layouts/_header' # Use helper method in order to have yaml frontmatter in partial used
     = yield
     = partial 'layouts/_footer'

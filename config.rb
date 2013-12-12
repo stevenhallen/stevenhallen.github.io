@@ -112,3 +112,51 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+helpers do
+
+  # Helper to allow partials to contain frontmatter
+  # Thanks to Vernon Kesner @ vernonkesner.com
+  # http://vernonkesner.com/blog/2013/02/16/using-frontmatter-in-partials-within-middleman/
+  #
+  # Note that this changes how to access data
+  # Instead of: current_page.data.foobar, it is: foobar
+  def snippet(component, overrides = nil)
+
+    def colorize(text, color_code)
+      "\e[#{color_code}m#{text}\e[0m"
+    end
+
+    def red(text); colorize(text, 31); end
+    def green(text); colorize(text, 32); end
+
+
+    basepath = File.expand_path File.dirname(__FILE__)
+    exists = File.exists?(basepath << "/source/" << component << ".haml")
+
+    if exists
+      # Read the partial, get the YAML, extend that hash with any overrides passed in
+      yaml_regex = /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+      content = File.read(basepath)
+      content = content.sub(yaml_regex, "")
+      data = YAML.load($1)
+
+      # Extend the hash so that any overrides are used instead of the defaults
+      if overrides != nil
+        overrides.each_key do |key|
+          data[key] = overrides[key]
+        end
+      end
+    else
+      puts red('[ERROR:]') + " Partial #{component} not found!"
+      return '<span style="color: red; font-weight: bold;">Error: Partial \'' + component + '\' not found!</span>'
+    end
+
+    ##
+    # At this point, we have our data and know it exists
+    # Just load that partial baby
+    ##
+    partial component, :locals => data
+
+  end
+end
