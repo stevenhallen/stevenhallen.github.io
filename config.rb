@@ -25,7 +25,7 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-page "/feed.xml", :layout => false
+page "/feed.xml", layout: false
 
 set :css_dir, 'stylesheets'
 set :images_dir, 'images'
@@ -35,6 +35,10 @@ set :haml, { format: :html5, ugly: true }
 foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
 sprockets.append_path "#{File.join(foundation_path, 'js')}"
 set :sass_assets_paths, [File.join(foundation_path, 'scss')]
+
+set :markdown_engine, :kramdown
+
+page '/sitemap.xml', layout: false
 
 ###
 # Compass
