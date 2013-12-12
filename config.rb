@@ -40,6 +40,19 @@ set :markdown_engine, :kramdown
 
 page '/sitemap.xml', layout: false
 
+pages = [
+  '/what_we_do.html',
+  '/our_work.html',
+  '/blog.html',
+  '/about.html',
+  '/jobs.html',
+  '/contact.html'
+]
+
+pages.each do |the_page|
+  page the_page, layout: :page_layout
+end
+
 ###
 # Compass
 ###
