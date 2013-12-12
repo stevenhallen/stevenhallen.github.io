@@ -5,6 +5,8 @@ tags: agile
 ---
 We have been consulting a state agency in their move toward a more agile software development process.  This is the second time we’ve helped a state agency with the transition from requirements focused, big design up front (BDUF), to a more lean and responsive development process.
 
+READMORE
+
 The client has been very happy and excited with all the positive changes implemented over the past several months.  *BDD is a hit* as well as automated full stack testing, however some agile practices, such as velocity based planning, have been less accepted.
 
 Let’s look into what’s behind this difference in acceptance of the various agile practices.

@@ -6,6 +6,8 @@ tags: git, rebase, post-programming
 
 In this series of articles, I want to share a little bit about my git workflow. I use git rebase fairly heavily. I think git rebase is essential to using git effectively.
 
+READMORE
+
 For starters, I rarely get things right the first time. If it ever seems like that to the casual observer, it’s because it’s not really the first time.
 
 Here’s what I typically do when I’m working on something new:

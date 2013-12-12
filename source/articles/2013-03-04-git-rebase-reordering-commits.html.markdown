@@ -4,7 +4,11 @@ date: 2013-03-04 21:41 UTC
 tags: git, rebase, post-programming
 ---
 
-In the [first article](http://google.com) in this series, I talked about the spectrum of utilization that exists for source code control tools. To recap:
+In the [first article](/articles/2013/git-rebase-rewriting-history-for-fun-and-profit.html) in this series, I talked about the spectrum of utilization that exists for source code control tools.
+
+READMORE
+
+To recap:
 
 ###Characteristics of poor utilization
 
