@@ -1,0 +1,25 @@
+.row
+  .small-6.columns
+    %aside
+      %h4 Recent Articles
+      %ul.no-bullet
+        - blog.articles[0...10].each do |article|
+          %li
+            = link_to article.title, article
+            %span= article.date.strftime('%b %e')
+  .small-3.columns
+    %aside
+      %h4 Tags
+      %ul.no-bullet
+        - blog.tags.each do |tag, articles|
+          %li
+            = link_to tag, tag_path(tag)
+            (#{articles.size})
+  .small-3.columns
+    %aside
+      %h4 By Year
+      %ul.no-bullet
+        - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+          %li
+            = link_to year, blog_year_path(year)
+            (#{articles.size})
