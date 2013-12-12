@@ -43,6 +43,8 @@ When looking at the practices that were accepted and not as well accepted, it’
 
 This fact reminded me of Steven Covey’s _Seven Habits of Highly Effective People_. In his first habit, **Be Proactive**, he mentions two circles.  The circle of concern and the circle of influence.
 
+![Circle of Concern & Circle of Influence](circle_influence_concern.png)!
+
 Covey talks about focusing on the circle of influence, and how successful people are able to utilize their success to **grow their circle of influence**.
 
 And it’s this habit that I think is important for implementing agile within an organization where the top management is not leading the charge.  By focusing our changes on those things most controlled by the developers, we were able to improve the internal processes quickly.  We could have battled management on the futility of multi-month detailed project plans, but that would likely not have helped them see the benefits of agile.  We needed to **first prove Agile Development is better, and after that, grow the circle of influence**.
