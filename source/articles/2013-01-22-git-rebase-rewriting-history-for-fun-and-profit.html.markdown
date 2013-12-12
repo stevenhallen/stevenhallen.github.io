@@ -2,6 +2,7 @@
 title: 'git rebase: Rewriting History for Fun and Profit'
 date: 2013-01-22 21:40 UTC
 tags: git, rebase, post-programming
+image: git.png
 ---
 
 In this series of articles, I want to share a little bit about my git workflow. I use git rebase fairly heavily. I think git rebase is essential to using git effectively.
