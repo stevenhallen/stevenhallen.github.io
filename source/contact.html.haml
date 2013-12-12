@@ -1,8 +1,8 @@
 .row
-  .twelve.colums.centered
+  .small-12.columns.small-centered
     %h2 Contact Us
 .row
-  .six.columns
+  .small-6.columns
     - form_tag '/contact', class: 'contact-form', method: 'post' do
       - field_set_tag do
         %p
@@ -19,7 +19,7 @@
           = text_area_tag :message
         %p
           = submit_tag 'Submit', class: 'button'
-  .six.columns
+  .small-6.columns
     %p
       We'd love to chat about your business goals and how we can help.
     %p

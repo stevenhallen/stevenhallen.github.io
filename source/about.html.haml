@@ -14,11 +14,11 @@ people:
     desc:    Corey became an expert ruby on rails developer as one of the senior consultants at the boutique rails consultancy Hashrocket. Corey has significant experience in large scale enterprises as well as being a development leader on numerous startups and agile development teams.
 ---
 .row
-  .twelve.columns.centered
+  .small-12.columns.centered
     %h2 About Us
 .row
-  .four.columns
-    - current_page.data.people.each do |person|
+  - current_page.data.people.each do |person|
+    .small-4.columns
       %h4 #{person.name}
       %h6 #{person.role} #{link_to(image_tag('twitter_icon.png'), "http://twitter.com/#{person.twitter}")}
       %p= person.desc
